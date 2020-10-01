@@ -1,0 +1,12 @@
+[Unit]
+Description=usb-wde1-reader
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=__APP_DIR__/app
+ExecStart=__APP_DIR__/app/bin/python3 __APP_DIR__/app/app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
